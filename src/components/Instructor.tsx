@@ -40,8 +40,12 @@ const Instructor = () => {
               <div className="md:flex">
                 <div className="md:w-1/3 bg-gradient-to-br from-purple-600 to-indigo-600 p-8 text-white flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-                      <Icon name="User" size={64} className="text-white" />
+                    <div className="w-32 h-32 rounded-full overflow-hidden mb-4 mx-auto border-4 border-white/30">
+                      <img
+                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                        alt="Александр Иванов"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <h3 className="text-2xl font-bold">Александр Иванов</h3>
                     <p className="text-purple-200 mt-2">

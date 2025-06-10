@@ -9,24 +9,38 @@ const ContactSection = () => {
       title: "Email",
       value: "info@python-courses.ru",
       link: "mailto:info@python-courses.ru",
+      image:
+        "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
     },
     {
       icon: "Phone",
       title: "Телефон",
       value: "+7 (999) 123-45-67",
       link: "tel:+79991234567",
+      image:
+        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
     },
     {
       icon: "MessageCircle",
       title: "Telegram",
       value: "@python_courses",
       link: "https://t.me/python_courses",
+      image:
+        "https://images.unsplash.com/photo-1611746872915-64382b5c76da?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
     },
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-purple-900 to-indigo-900 text-white">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-gradient-to-br from-purple-900 to-indigo-900 text-white relative overflow-hidden">
+      {/* Фоновое изображение */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+        style={{
+          backgroundImage:
+            "url(https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80)",
+        }}
+      ></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Готовы начать обучение?</h2>
           <p className="text-xl text-purple-200 max-w-2xl mx-auto">
@@ -39,10 +53,18 @@ const ContactSection = () => {
             {contacts.map((contact, index) => (
               <Card
                 key={index}
-                className="bg-white/10 border-white/20 hover:bg-white/20 transition-colors duration-300"
+                className="bg-white/10 border-white/20 hover:bg-white/20 transition-colors duration-300 overflow-hidden"
               >
+                <div className="relative h-32">
+                  <img
+                    src={contact.image}
+                    alt={contact.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
                 <CardHeader className="text-center pb-2">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-600 rounded-full mb-4">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-600 rounded-full mb-4 -mt-6 relative z-10">
                     <Icon
                       name={contact.icon}
                       size={24}

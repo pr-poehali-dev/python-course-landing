@@ -14,6 +14,8 @@ const CourseProgram = () => {
         "Циклы и функции",
       ],
       project: "Калькулятор с GUI",
+      image:
+        "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
     },
     {
       week: "Недели 3-4",
@@ -25,6 +27,8 @@ const CourseProgram = () => {
         "Обработка исключений",
       ],
       project: "Система управления задачами",
+      image:
+        "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
     },
     {
       week: "Недели 5-6",
@@ -36,6 +40,8 @@ const CourseProgram = () => {
         "Модули и пакеты",
       ],
       project: 'Игра "Крестики-нолики"',
+      image:
+        "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
     },
     {
       week: "Недели 7-8",
@@ -47,6 +53,8 @@ const CourseProgram = () => {
         "Работа с API",
       ],
       project: "Анализатор курса валют",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
     },
     {
       week: "Недели 9-10",
@@ -58,6 +66,8 @@ const CourseProgram = () => {
         "Формы и авторизация",
       ],
       project: "Веб-приложение блог",
+      image:
+        "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
     },
     {
       week: "Недели 11-12",
@@ -69,6 +79,8 @@ const CourseProgram = () => {
         "Презентация проекта",
       ],
       project: "Выпускной проект по выбору",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
     },
   ];
 
@@ -91,6 +103,14 @@ const CourseProgram = () => {
               key={index}
               className="hover:shadow-lg transition-shadow duration-300"
             >
+              <div className="relative">
+                <img
+                  src={module.image}
+                  alt={module.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              </div>
               <CardHeader className="bg-gradient-to-r from-purple-50 to-indigo-50">
                 <div className="flex items-center justify-between">
                   <Badge

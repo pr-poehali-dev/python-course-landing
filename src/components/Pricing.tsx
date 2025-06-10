@@ -55,8 +55,23 @@ const Pricing = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-white relative overflow-hidden">
+      {/* Декоративные элементы */}
+      <div className="absolute top-20 left-10 w-20 h-20 opacity-10">
+        <img
+          src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+          alt=""
+          className="w-full h-full object-cover rounded-full"
+        />
+      </div>
+      <div className="absolute bottom-20 right-10 w-32 h-32 opacity-10">
+        <img
+          src="https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+          alt=""
+          className="w-full h-full object-cover rounded-full"
+        />
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-gray-800">
             Тарифы и цены

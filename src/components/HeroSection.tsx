@@ -4,7 +4,15 @@ import { Badge } from "@/components/ui/badge";
 const HeroSection = () => {
   return (
     <section className="relative bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 text-white py-20 overflow-hidden">
-      <div className="absolute inset-0 bg-black/20"></div>
+      {/* Фоновое изображение */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+        style={{
+          backgroundImage:
+            "url(https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80)",
+        }}
+      ></div>
+      <div className="absolute inset-0 bg-black/40"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <Badge className="mb-6 bg-purple-600 hover:bg-purple-700 text-white">
